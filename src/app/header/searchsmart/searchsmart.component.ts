@@ -22,8 +22,10 @@ public movies : Movies={
   }
   
   searchbox="";
+  @Output() sendToHeader =new EventEmitter<Movies>();
   onReceiving(searchmovie:string){
     this.searchbox=searchmovie;
     this.searchdataService.getMovies(this.searchbox).subscribe(data => this.movies = data)
+    this.sendToHeader.emit(this.movies);
   }
 }

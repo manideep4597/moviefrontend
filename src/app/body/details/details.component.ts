@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit,Input } from '@angular/core';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route:Router) { }
 
   ngOnInit() {
   }
+  @Input('movieList') movieList: string;
 
 }

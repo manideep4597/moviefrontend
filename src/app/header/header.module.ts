@@ -15,7 +15,7 @@ import {BrowserModule} from '@angular/platform-browser'
     BrowserModule,
     HttpClientModule
   ],
-  exports:[HeadercomponentComponent, SearchdumbComponent, SearchsmartComponent],
+   exports:[ HeadercomponentComponent, SearchdumbComponent, SearchsmartComponent],
   declarations: [HeadercomponentComponent, SearchdumbComponent, SearchsmartComponent]
 })
 export class HeaderModule { }
