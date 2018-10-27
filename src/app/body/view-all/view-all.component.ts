@@ -30,7 +30,7 @@ export class ViewAllComponent implements OnInit {
       "id":movie.id,
       "title": movie.title,
       "language":movie.original_language,
-      "comments":this.comments,
+      "comments":movie.comments,
       "releaseDate":this.date.toDateString
   }
   this.viewAllService.putMoviesDB(m).subscribe(data => this.moviesDB = data)
@@ -42,7 +42,7 @@ export class ViewAllComponent implements OnInit {
       "id":movie.id,
       "title": movie.title,
       "language":movie.original_language,
-      "comments":this.comments,
+      "comments":movie.comments,
       "releaseDate":this.date.toDateString
   }
   this.viewAllService.deleteMoviesDB(m).subscribe(data => this.moviesDB = data)

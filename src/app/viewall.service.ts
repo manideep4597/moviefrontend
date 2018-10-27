@@ -6,7 +6,7 @@ import {MovieDB} from './movieDB';
   providedIn: 'root'
 })
 export class ViewallService {
-  private url: string = "http://localhost:8080/movie-service2/movie-api/v1/movie"
+  private url: string = "https://localhost:8441/movie-service2/movie-api/v1/movie"
   constructor(private http : HttpClient) { }
   public getMoviesDB(): Observable<MovieDB>{
     return this.http.get<MovieDB>(this.url);
