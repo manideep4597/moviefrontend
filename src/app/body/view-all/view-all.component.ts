@@ -17,11 +17,37 @@ export class ViewAllComponent implements OnInit {
     title:'',
     language:'',
     comments:'',
-    releaseDate:this.now
+    releaseDate:''
   };
   ngOnInit() {
     this.viewAllService.getMoviesDB().subscribe(data => this.moviesDB = data)
     
+  }
+  comments=""
+  date=new Date();
+  update(movie){
+    var m={
+      "id":movie.id,
+      "title": movie.title,
+      "language":movie.original_language,
+      "comments":this.comments,
+      "releaseDate":this.date.toDateString
+  }
+  this.viewAllService.putMoviesDB(m).subscribe(data => this.moviesDB = data)
+    
+   // this.route.navigate(['/add',{id:movie.id,title:movie.title,lan:movie.original_language,date:movie.release_date}]);
+  }
+  delete(movie){
+    var m={
+      "id":movie.id,
+      "title": movie.title,
+      "language":movie.original_language,
+      "comments":this.comments,
+      "releaseDate":this.date.toDateString
+  }
+  this.viewAllService.deleteMoviesDB(m).subscribe(data => this.moviesDB = data)
+    
+   // this.route.navigate(['/add',{id:movie.id,title:movie.title,lan:movie.original_language,date:movie.release_date}]);
   }
   
 

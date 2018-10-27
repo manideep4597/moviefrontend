@@ -1,8 +1,9 @@
-<h2>Movies</h2>
+<h2>Movies from Wishlist</h2>
     <ul>
-        <li *ngFor="let movie of moviesDB">
+        <li *ngFor="let movie of moviesDB; let in=index">
             {{ movie.id}},{{movie.title}},{{movie.language}},{{movie.releaseDate}}
         {{movie.comments}}
-        
+        <input type="text" [(ngModel)]="movie.comments"><a><button (click)=update(movie) >Update {{movie.title}}</button></a>
+        <a><button (click)=delete(movie) >Delete {{movie.title}}</button></a>
         </li>
     </ul>

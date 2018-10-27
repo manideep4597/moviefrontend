@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DetailsComponent } from './details/details.component';
 import {MatCardModule} from '@angular/material/card';
-import { AddbtnComponent } from './addbtn/addbtn.component';
 import { FormsModule } from '@angular/forms';
 //import { ViewAllComponent } from './view-all/view-all.component';
 
@@ -12,7 +11,7 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     FormsModule
   ],
-  declarations: [ AddbtnComponent],
-  exports:[AddbtnComponent]
+  declarations: [],
+  exports:[]
 })
 export class BodyModule { }

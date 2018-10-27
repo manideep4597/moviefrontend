@@ -5,7 +5,7 @@ import { DetailsComponent } from './body/details/details.component';
 import { SearchdumbComponent } from './header/searchdumb/searchdumb.component';
 import { HeadercomponentComponent } from './header/headercomponent/headercomponent.component';
 const routes: Routes = [
-  {path:'cards',component:DetailsComponent},
+  {path:'IMDB',component:DetailsComponent},
     {path:'viewAll',component:ViewAllComponent}
 ];
 

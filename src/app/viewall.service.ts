@@ -6,19 +6,19 @@ import {MovieDB} from './movieDB';
   providedIn: 'root'
 })
 export class ViewallService {
-  private url: string = "http://localhost:8080/movie-service2/movie-api/v1/movie/"
+  private url: string = "http://localhost:8080/movie-service2/movie-api/v1/movie"
   constructor(private http : HttpClient) { }
   public getMoviesDB(): Observable<MovieDB>{
     return this.http.get<MovieDB>(this.url);
   }
-  public postMoviesDB(movie:MovieDB): Observable<MovieDB>{
+  public postMoviesDB(movie:any): Observable<MovieDB>{
     return this.http.post<MovieDB>(this.url,movie);
   }
-  public putMoviesDB(movie:MovieDB): Observable<MovieDB>{
-    return this.http.put<MovieDB>(this.url+movie.id,movie.comments);
+  public putMoviesDB(movie:any): Observable<MovieDB>{
+    return this.http.put<MovieDB>(this.url+"/"+movie.id,movie.comments);
   }
-  public deleteMoviesDB(movie:MovieDB): Observable<MovieDB>{
-    return this.http.delete<MovieDB>(this.url+movie.id);
+  public deleteMoviesDB(movie:any): Observable<MovieDB>{
+    return this.http.delete<MovieDB>(this.url+"/"+movie.id);
   }
   
 }

@@ -3,5 +3,5 @@ export interface MovieDB{
     title: string; 
     language:string;
     comments:string;
-    releaseDate:Date;
+    releaseDate:string;
 }

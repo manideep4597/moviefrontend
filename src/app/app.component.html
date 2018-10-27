@@ -20,5 +20,11 @@
 
 <router-outlet></router-outlet> -->
 <app-headercomponent (sendToApp)="onReceiving($event)"></app-headercomponent>
-<app-details [movieList]=send()></app-details>
-<app-view-all></app-view-all>
+<!-- <app-details [movieList]=send()></app-details>
+<app-view-all></app-view-all>  -->
+<h1>{{title}}</h1>
+<nav>
+  <a routerLink="/viewAll">Wishlist</a>
+  <a routerLink="/IMDB">IMDB</a>
+</nav>
+<router-outlet></router-outlet>
