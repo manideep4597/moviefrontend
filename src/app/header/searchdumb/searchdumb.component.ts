@@ -14,6 +14,7 @@ export class SearchdumbComponent implements OnInit {
   searchbox="";
   @Output() sendToParent =new EventEmitter<string>();
   search(){
+    console.log(this.searchbox);
     this.sendToParent.emit(this.searchbox);
   }
 }

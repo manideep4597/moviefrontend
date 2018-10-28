@@ -7,7 +7,7 @@ import { SearchdataService } from './header/searchdata.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'movie-cruiser';
+  title = 'Movie-Cruiser';
   public movies : Movies={
     page:1,
     results:[],

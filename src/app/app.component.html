@@ -19,12 +19,18 @@
 </ul>
 
 <router-outlet></router-outlet> -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <app-headercomponent (sendToApp)="onReceiving($event)"></app-headercomponent>
 <!-- <app-details [movieList]=send()></app-details>
 <app-view-all></app-view-all>  -->
 <h1>{{title}}</h1>
+<mat-divider></mat-divider>
 <nav>
-  <a routerLink="/viewAll">Wishlist</a>
-  <a routerLink="/IMDB">IMDB</a>
+    <mat-chip-list>
+        <mat-chip color="primary" selected><a routerLink="/viewAll">Wishlist</a></mat-chip>
+        <mat-chip color="primary" selected><a routerLink="/IMDB">IMDB</a></mat-chip>
+    </mat-chip-list>
+  <!-- <a routerLink="/viewAll">Wishlist</a>
+  <a routerLink="/IMDB">IMDB</a> -->
 </nav>
 <router-outlet></router-outlet>

@@ -17,7 +17,17 @@ export class ViewAllComponent implements OnInit {
     title:'',
     language:'',
     comments:'',
-    releaseDate:''
+    releaseDate:'',
+    poster_path:'',
+    adult:false,
+    overview:'',
+    genre_ids:[],
+    original_title:'',
+    backdrop_path:'',
+    popularity:0,
+    vote_count:0,
+    video:false,
+    vote_average:0
   };
   ngOnInit() {
     this.viewAllService.getMoviesDB().subscribe(data => this.moviesDB = data)
@@ -31,7 +41,17 @@ export class ViewAllComponent implements OnInit {
       "title": movie.title,
       "language":movie.original_language,
       "comments":movie.comments,
-      "releaseDate":this.date.toDateString
+       "releaseDate":this.date.toDateString,
+      "poster_path":movie.poster_path,
+    "adult":movie.adult,
+    "overview":movie.overview,
+   // "releaseDate":movie.release_date,
+    "genre_ids":movie.genre_ids,
+    "backdrop_path":movie.backdrop_path,
+    "popularity":movie.popularity,
+    "vote_count":movie.vote_count,
+    "video":movie.video,
+    "vote_average":movie.vote_average
   }
   this.viewAllService.putMoviesDB(m).subscribe(data => this.moviesDB = data)
     
@@ -43,7 +63,17 @@ export class ViewAllComponent implements OnInit {
       "title": movie.title,
       "language":movie.original_language,
       "comments":movie.comments,
-      "releaseDate":this.date.toDateString
+       "releaseDate":this.date.toDateString,
+      "poster_path":movie.poster_path,
+    "adult":movie.adult,
+    "overview":movie.overview,
+   // "releaseDate":movie.release_date,
+    "genre_ids":movie.genre_ids,
+    "backdrop_path":movie.backdrop_path,
+    "popularity":movie.popularity,
+    "vote_count":movie.vote_count,
+    "video":movie.video,
+    "vote_average":movie.vote_average
   }
   this.viewAllService.deleteMoviesDB(m).subscribe(data => this.moviesDB = data)
     
